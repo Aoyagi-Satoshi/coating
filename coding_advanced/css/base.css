@@ -1,0 +1,434 @@
+@charset "UTF-8";
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+form,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+img {
+  border-style: none;
+  display: block;
+}
+hr {
+  display: none;
+}
+em {
+  font-style: normal;
+}
+input {
+  line-height: auto;
+  vertical-align: middle;
+}
+strong.more {
+  color: #c30;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header {
+  background-color: lightgray;
+  padding: 0 20px;
+  z-index: 10;
+}
+.header-logo {
+  padding: 0px 20px;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-list {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.header-list a {
+  color: black;
+}
+.hamburger-menu {
+  display: none;
+}
+
+.menu-btn {
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 40px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: black;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+.hamburger-menu {
+  display: none;
+  width: 100%;
+}
+.hamburger-menu-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sp-logo {
+  font-size: 32px;
+}
+.sp-menu {
+  background-color: lightgray;
+  display: none;
+}
+.sp-menu-list li {
+  padding: 10px;
+}
+.sp-menu a {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: black;
+}
+.sp-menu-wrapper {
+  display: none;
+  width: 100%;
+}
+.sp-search {
+  display: none;
+}
+.PC-search {
+  display: inline;
+}
+.search-btn {
+  display: flex;
+  align-items: center;
+}
+.serch-form {
+  gap: 5px;
+}
+.main-content {
+  background-color: #ffefd5;
+}
+.top-wrapper {
+  width: 100%;
+  text-align: center;
+}
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  display: block;
+}
+.news {
+  padding-bottom: 40px;
+}
+.news-title {
+  font-size: 28px;
+  line-height: 1.5;
+}
+.news-topics {
+  width: 100%;
+  height: 50px;
+  background-color: #ffc7af;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1.5;
+}
+.news-label {
+  display: none;
+  background-color: #ffefd5;
+  text-align: center;
+}
+.news-label li {
+  list-style: disc;
+  list-style-position: inside;
+  padding: 0px 0px 10px 5px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.news-label li::marker {
+  font-size: 0.6em;
+}
+.image-info {
+  display: flex;
+  line-height: 1.5;
+  padding-bottom: 15px;
+}
+.image-item {
+  margin: 20px;
+  min-height: 100px;
+}
+.fadeIn {
+  opacity: 0;
+  transition: 2s;
+}
+.fadeIn.is-show {
+  opacity: 1;
+}
+
+.image-item h2 {
+  padding: 10px;
+  font-size: 24px;
+}
+.image-info img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-info h3 {
+  width: 50%;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 20px 40px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.addrees {
+  padding: 20px;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.addrees img {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  object-fit: cover;
+}
+.addrees-info h2 {
+  font-size: 24px;
+  text-indent: 1em;
+  margin-bottom: 8px;
+}
+.addrees-info p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.store-info {
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.store-info h1 {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+}
+.store-list {
+  display: flex;
+  text-align: center;
+}
+.store-Tokyo,
+.store-Chiba,
+.store-Kanagawa,
+.store-Saitama {
+  width: 25%;
+}
+.store-label {
+  display: inline-block;
+}
+.trim-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: inline-block;
+  background-position: center center;
+  background-size: cover;
+}
+.Tokyo {
+  background-image: url("../img/restaurant2.jpg");
+}
+.Chiba {
+  background-image: url("../img/restaurant3.jpg");
+}
+.Kanagawa {
+  background-image: url("../img/restaurant4.jpg");
+}
+.Saitama {
+  background-image: url("../img/restaurant5.jpg");
+}
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: darkgray;
+}
+.footer-list {
+  padding: 30px 10px 0 5px;
+}
+.footer-list ul {
+  text-align: center;
+}
+.footer-list li {
+  display: inline-block;
+  list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-logo {
+    float: none;
+    font-size: 24px;
+    padding: 10px 0;
+  }
+  .header-menu {
+    display: none;
+  }
+  .header-right {
+    padding: 0;
+    display: none;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer-list {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .swiper img {
+    height: 100%;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+
+  .menu-btn-check {
+    display: none;
+  }
+  .sp-menu-wrapper {
+    display: block;
+  }
+  .news {
+    margin: 20px;
+  }
+  .swiper-slide {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+  .swiper-slide img {
+    object-fit: cover;
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .image-info {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .image-info img {
+    width: 100%;
+  }
+  .image-info h3 {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0px;
+  }
+  .addrees {
+    display: block;
+    margin: 0px 20px;
+  }
+  .addrees-info h2 {
+    font-size: 20px;
+  }
+  .addrees-info p {
+    font-size: 12px;
+  }
+  .store-info {
+    display: none;
+  }
+  .swiper-wrapper {
+    width: 60%;
+  }
+}
